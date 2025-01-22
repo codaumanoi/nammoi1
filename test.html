@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy New Year</title>
+    <link href="test.css" rel="stylesheet">
+    <audio id="music" autoplay loop>
+      <source src="sound backgroud 2.MP3" type="audio/mp3">
+      Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
+  </head>
+
+<body>
+  <script>
+    setTimeout(function() {
+      document.getElementById('nút-chuyển-sang-test2').style.display = 'block';
+      document.getElementById('nút-chuyển-sang-test2').style.opacity = 1;
+    }, 17000);
+
+    document.getElementById('chuyen-sang-test2').addEventListener('click', function() {
+      window.location.href = "test2.html";
+    });
+  </script>
+
+  <div class="loading">
+    <h2>2024</h2>
+    <div class="bar"></div>
+    <h2>2025</h2>
+  </div>
+  <div class="center">
+    <div><h2>Happy New Year</h2></div>
+    <div></div>
+    <div><h2>2025!</h2></div>
+    <div></div>
+    <audio id="background-music" loop preload="auto">
+      <source src="audio backgroud.MP3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát âm thanh.
+    </audio>
+    
+    <script>
+      // Không cần sử dụng hàm play() vì đã có thuộc tính autoplay
+      // document.getElementById("music").play();
+    </script>
+    <script src="test.js"></script>
+</body>
+</html>

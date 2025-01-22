@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pháo hoa với hiệu ứng</title>
+  <link rel="stylesheet" href="pháo hoa.css">
+</head>
+<body>
+  <div id="end" style="opacity: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: show 17s forwards; animation-play-state: paused; animation-delay: 17000ms;">
+    <div class="loading">
+      <h2>2024</h2>
+      <div class="bar"></div>
+      <h2>2025</h2>
+    </div>
+    <div class="center">
+      <div><h2>Happy New Year</h2></div>
+      <div></div>
+      <div><h2>2025!</h2></div>
+      <div></div>
+    </div>
+  </div>
+  <div id="end" style="display: none;">Kết thúc</div>
+  <div id="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <input type="password" id="mat-khau" placeholder="Nhập mật khẩu" style="position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%); padding: 10px; border: none; border-radius: 8px; background-color: #2d2d2d; color: #9bf73c;">
+  <button id="xac-nhan" style="position: absolute; top: 47%; left: 70%; transform: translate(-50%, -50%); padding: 10px; border: none; border-radius: 8px; background-color: #2d2d2d; color: #9bf73c;">Xác nhận</button>
+    <canvas id="phao-hoa"></canvas>
+    <button id="ban-phao-hoa" style="opacity: 1; transition: opacity 0.5s ease-in-out;">Khởi động!</button>
+    <div id="loi-chuc" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">chúc các bạn năm mới </div>
+    <div id="loi-chuc-2" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">vui vẻ hạnh phúc bên gia đình </div> 
+    <div id="loi-chuc-3" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">bạn bè và người thân </div> 
+    <div id="loi-chuc-4" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">t chỉ viết code được như v thôi </div> 
+    <div id="loi-chuc-5" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">mn có thể xem chi tiết code trên github </div> 
+    <div id="loi-chuc-6" style="display: none; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 77px; color: red; font-weight: bold; display: none; justify-content: center; align-items: center;">kí tên ĐẾ CHẾ MẤT NÃO </div> 
+  <!-- Âm thanh nền -->
+  <audio id="background-music" loop preload="auto">
+    <source src="audio backgroud.MP3" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ phát âm thanh.
+  </audio>
+
+  <!-- Âm thanh pháo hoa -->
+  <audio id="explosion-sound" src="sound 3.mp3" preload="auto"></audio>
+
+  <script>
+    // Lấy phần tử âm thanh
+    const backgroundMusic = document.getElementById("background-music");
+
+    // Lấy nút bật nhạc
+    const batNhacButton = document.getElementById("ban-phao-hoa");
+
+    // Thêm sự kiện click để phát nhạc
+    batNhacButton.addEventListener("click", () => {
+      backgroundMusic.play();
+      batNhacButton.style.display = "none"; // Ẩn nút sau khi nhấp
+    });
+  </script>
+  <script src="pháo hoa.js"></script>
+</body>
+</html>
